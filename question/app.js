@@ -111,5 +111,51 @@ function foo() {
 // console.log(x); がエラーになる理由
 // x は foo の中で定義されているので、外から参照できないスコープの外にあるため
 // → 「スコープ」「参照」
-console.log(x); // ReferenceError: x is not defined
+//console.log(x); ReferenceError: x is not defined
 
+//section6
+//Q1 標準組み込みオブジェクト
+let randomNumber = Math.floor(Math.random() * 10);
+console.log(randomNumber);
+
+//Q2 コールバック関数
+setTimeout(function() {
+  console.log('Hello World!');
+}, 3000);
+
+//Q3 if
+let num = 5;
+
+if (num > 0) {
+  console.log('num is greater than 0');
+} else if (num < 0) {
+  console.log('num is less than 0');
+} else {
+  console.log('num is 0');
+}
+
+//Q4 for
+let numbers = [];
+
+for (let i = 0; i < 100; i++) {
+  numbers.push(i);
+}
+
+console.log(numbers);
+
+//Q5 for × if
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let i = 0; i < mixed.length; i++) {
+  let item = mixed[i];
+
+  if (typeof item === 'number') {
+    if (item % 2 === 0) {
+      console.log('even');
+    } else {
+      console.log('odd');
+    }
+  } else {
+    console.log('not number');
+  }
+}
