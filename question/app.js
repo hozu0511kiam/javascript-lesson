@@ -100,8 +100,11 @@ function remainder(x, y) {
   return x % y;
 }
 
-let result = remainder(5, 3);
-console.log(5 + ' を 3 で割った余りは ' + result + ' です。');
+let x = 5;
+let y = 3;
+let result = x % y;
+
+console.log(x + ' を ' + y + ' で割った余りは ' + result + ' です。');
 
 //Q10 スコープ
 function foo() {
